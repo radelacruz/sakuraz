@@ -1,0 +1,58 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	/*font-family: 'Federant', cursive;*/
+}
+
+#navbar{
+	background-color: #FE938C;
+	padding: 5px;
+	font-family: 'Federant', cursive;
+}
+#navbar > img{
+	size: 50px;
+}
+
+#navbar> a{
+	color: #E51666;
+	font-family: 'Playball', cursive;
+	font-size: 40px;
+	text-shadow: 2px 2px 4px #000000;
+	padding: 0;
+
+}
+#footer{
+	background-color: #FE938C;
+	padding: 5px;
+}
+
+small a{
+	text-decoration: none;
+	color: #E51666;
+}
+
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.logo{
+	height: 100%;
+	width: 50px;
+}
+
+.jumbotron{
+	background-color: lightpink;
+}
+body{
+	height: 100vh;
+	background-image: url(../images/bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}

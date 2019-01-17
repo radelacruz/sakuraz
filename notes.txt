@@ -1,0 +1,35 @@
+CREATE DATABASE ecom_db;
+
+USE ecom_db;
+
+CREATE TABLE categories ( id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255) NOT NULL, PRIMARY KEY (id) );
+
+CREATE TABLE users ( id INT NOT NULL AUTO_INCREMENT, firstname VARCHAR(255) NOT NULL, lastname VARCHAR(255) NOT NULL, username VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, address VARCHAR(255) NOT NULL, PRIMARY KEY (id) );
+
+CREATE TABLE items ( id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, description VARCHAR(255) NOT NULL, price DECIMAL(18,2) NOT NULL, image_path VARCHAR(255), category_id INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (category_id) REFERENCES categories(id) );
+
+CREATE TABLE statuses ( id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, PRIMARY KEY (id) );
+
+CREATE TABLE payment_modes ( id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL, PRIMARY KEY (id) );
+
+CREATE TABLE orders ( id INT AUTO_INCREMENT NOT NULL, user_id INT NOT NULL, transaction_code VARCHAR(255) NOT NULL, purchase_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, total INT NOT NULL, status_id INT NOT NULL, payment_mode_id INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (user_id) REFERENCES users(id), FOREIGN KEY (status_id) REFERENCES statuses(id), FOREIGN KEY (payment_mode_id) REFERENCES payment_modes(id) );
+
+CREATE TABLE order_items ( id INT AUTO_INCREMENT NOT NULL, order_id INT NOT NULL, price DECIMAL(18,2) NOT NULL, item_id INT NOT NULL, quantity INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (order_id) REFERENCES orders(id), FOREIGN KEY (item_id) REFERENCES items(id) );
+
+INSERT INTO categories (name) VALUES ("Breakfast");
+
+INSERT INTO categories (name) VALUES ("Lunch");
+
+INSERT INTO categories (name) VALUES ("Dinner");
+
+INSERT INTO items (name, description, price, category_id) VALUES ("Tapsilog","Marinated beef with poached egg on garlic fried rice", 65.50, 1);
+
+INSERT INTO items (name, description, price, category_id) VALUES ("Pares","Beef broth with bone marrow and intestines", 45, 2);
+
+INSERT INTO items (name, description, price, category_id) VALUES ("Tuyo","Dried Mackarel", 120, 2);
+
+INSERT INTO items (name, description, price, category_id) VALUES ("Adobong Manok","Chicken marinated in soysauce and vinegar with black pepper and bayleaf", 42.5, 3);
+
+
+-------------
+composer require  phpmailer/phpmailer
