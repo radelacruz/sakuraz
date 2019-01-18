@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 17, 2019 at 04:57 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Host: localhost
+-- Generation Time: Jan 18, 2019 at 03:42 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -81,7 +81,19 @@ INSERT INTO `items` (`id`, `name`, `description`, `price`, `image_path`, `catego
 (14, 'SZ-CL001', 'Calla Lilies Bouquet with Roses (12 Stems)', '3450.00', '../assets/images/CL001.jpg', 5),
 (15, 'SZ-PR001', 'Preserved Red Rose Cube (1pc)', '2200.00', '../assets/images/PR001.jpg', 6),
 (16, 'SZ-PR002', 'Preserved Black Rose Cube (1pc)', '2200.00', '../assets/images/PR002.jpg', 6),
-(17, 'SZ-PR003', 'Preserved Pink Rose Cube (1pc)', '2200.00', '../assets/images/PR003.jpg', 6);
+(17, 'SZ-PR003', 'Preserved Pink Rose Cube (1pc)', '2200.00', '../assets/images/PR003.jpg', 6),
+(18, 'SZ-PF001', 'Potted Red Roses Plant', '1650.00', '../assets/images/PF001.jpg', 7),
+(19, 'SZ-PF002', 'Potted White Roses Plant', '1650.00', '../assets/images/PF002.jpg', 7),
+(20, 'SZ-M001', 'The arrangement consists of one dozen hot pink roses, 4 hot pink gerberas, 4 light pink carnations and 5 pink alstromerias.', '4250.00', '../assets/images/M001.jpg', 8),
+(21, 'SZ-R005', 'Mixed Roses (50 Stems)', '4650.00', '../assets/images/R005.jpg', 4),
+(22, 'SZ-M002', 'Mixed Flowers Bouquet (24 Stems)', '12950.00', '../assets/images/M002.jpg', 8),
+(23, 'SZ-M003', 'The arrangement consists of two dozens red roses and 1 dozen of pink stargazers.', '16580.00', '../assets/images/M003.jpg', 8),
+(24, 'SZ-SG001', 'Pink Stargazers Bouquet (12 Stems)', '3200.00', '../assets/images/SG001.jpg', 9),
+(25, 'SZ-SG002', 'White Stargazers Bouquet (12 Stems)', '2800.00', '../assets/images/SG002.jpg', 9),
+(26, 'SZ-SG003', 'Yellow Stargazers Bouquet (12 Stems)', '2850.00', '../assets/images/SG003.jpg', 9),
+(27, 'SZ-C001', 'Red Carnations Bouquet (30 Stems)', '5800.00', '../assets/images/C001.jpg', 10),
+(28, 'SZ-C002', 'Mixed Color Carnation Bouquet (12 Stems)', '3050.00', '../assets/images/C002.jpg', 10),
+(29, 'SZ-C003', 'Pink Carnation Bouquet (24 Stems)', '4800.00', '../assets/images/C003.jpg', 10);
 
 -- --------------------------------------------------------
 
@@ -103,7 +115,19 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `transaction_code`, `purchase_date`, `status_id`, `payment_mode_id`) VALUES
-(1, 19, 'C46D3E1BAEC396A4-1547736396', '2019-01-17 07:46:36', 1, 1);
+(1, 19, 'C46D3E1BAEC396A4-1547736396', '2019-01-17 07:46:36', 2, 1),
+(2, 19, '8FA15B0C0F2E4768-1547775130', '2019-01-17 18:32:10', 3, 1),
+(3, 19, '69B2671BA4F652CE-1547775142', '2019-01-17 18:32:22', 2, 1),
+(4, 19, '2AECC36F75866B52-1547775155', '2019-01-17 18:32:35', 2, 1),
+(5, 19, '0E876022C7E9086F-1547775166', '2019-01-17 18:32:46', 3, 1),
+(6, 19, 'B503E27F899D343F-1547775175', '2019-01-17 18:32:55', 2, 1),
+(7, 19, '083CAFBC0B654B53-1547775189', '2019-01-17 18:33:09', 1, 1),
+(8, 15, 'E90D8CDCE8326F4A-1547775456', '2019-01-17 18:37:36', 1, 1),
+(9, 15, '82E4384419A81675-1547775468', '2019-01-17 18:37:48', 1, 1),
+(10, 15, 'DF0B2C16D4B12098-1547775478', '2019-01-17 18:37:58', 1, 1),
+(11, 18, 'A794690FBF03206E-1547775548', '2019-01-17 18:39:08', 1, 1),
+(12, 18, '2E9675B56176EE3B-1547775559', '2019-01-17 18:39:19', 2, 1),
+(13, 19, 'A005CD21AB9EBA85-1547779263', '2019-01-17 19:41:03', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -126,7 +150,31 @@ CREATE TABLE `order_items` (
 INSERT INTO `order_items` (`id`, `order_id`, `price`, `item_id`, `quantity`) VALUES
 (1, 1, '1399.00', 2, 6),
 (2, 1, '850.00', 3, 9),
-(3, 1, '1850.00', 4, 2);
+(3, 1, '1850.00', 4, 2),
+(4, 2, '3999.00', 1, 1),
+(5, 2, '1399.00', 2, 1),
+(6, 2, '1050.00', 3, 1),
+(7, 2, '1850.00', 4, 1),
+(8, 3, '1050.00', 3, 1),
+(9, 3, '1850.00', 4, 1),
+(10, 4, '1050.00', 3, 1),
+(11, 4, '1850.00', 4, 1),
+(12, 4, '1399.00', 2, 1),
+(13, 5, '3999.00', 1, 1),
+(14, 5, '1050.00', 3, 1),
+(15, 6, '1399.00', 2, 1),
+(16, 6, '1050.00', 3, 1),
+(17, 6, '1850.00', 4, 1),
+(18, 7, '1050.00', 3, 1),
+(19, 7, '2345.00', 10, 1),
+(20, 8, '3999.00', 1, 1),
+(21, 8, '1399.00', 2, 1),
+(22, 9, '3999.00', 1, 1),
+(23, 10, '4345.00', 11, 1),
+(24, 11, '1399.00', 2, 1),
+(25, 11, '1050.00', 3, 1),
+(26, 12, '3999.00', 1, 1),
+(27, 13, '3999.00', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -211,7 +259,7 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `ema
 (15, 'micca', 'barreda', 'micca', '$2y$10$4MejX70dJtT4Z8ZSoBwaIuVmPTgtOJdN0TM6Z0bEK5PF3X7AAVJG6', 'micca.barreda@gmail.com', '25/F Hanston Square, 17 San Miguel Avenue, Ortigas Center, Pasig City 1605', 2),
 (16, 'rissel', 'intod', 'rissel', '$2y$10$ubTZ6QyM0lJfQ7JjDXy8ne3/1nfzNmhLFUxAvLl3ysAsFw3N5Ah0m', 'intodrissel16@gmail.com', 'earth', 2),
 (17, 'ann', 'adriano', 'granny', '$2y$10$sj5oS2254sinYgqIJ5SkCeWAexCQt9pVRcpmYOlVKqQ5VZeg8J5mC', 'annadrianostaff@gmail.com', 'bulacan', 1),
-(18, 'rochelle', 'tamayo', 'rochelle', '$2y$10$s12NtbydqY88yukF1KTWa.RcXbzaBzfZqFji/E/U0vmmK/6Fp1pY2', 'rochelletamayo@gmail.com', 'Kanagawa Ken Sagamihara Shi Sagamidai 3-6-16 leopalace mareko 305', 1),
+(18, 'rochelle', 'tamayo', 'rochelle', '$2y$10$s12NtbydqY88yukF1KTWa.RcXbzaBzfZqFji/E/U0vmmK/6Fp1pY2', 'rochelletamayo@gmail.com', 'Kanagawa Ken Sagamihara Shi Sagamidai 3-6-16 leopalace mareko 305', 2),
 (19, 'ann', 'adriano', 'iamgranny', '$2y$10$HZL6u9NeqarWtkom1rQBRufqiAREbbwCku8RqfLkotwmO9gA4BraG', 'annadrianostaff@gmail.com', 'bulacan', 2);
 
 --
@@ -287,19 +335,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `payment_modes`

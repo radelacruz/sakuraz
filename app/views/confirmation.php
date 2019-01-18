@@ -7,7 +7,7 @@ function get_page_content(){
 		<div class="container main-container my-4">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="text-center">Confirmation Page</h1>
+					<h1 class="text-center py-3">Confirmation Page</h1>
 
 					<h3>Reference No.: <?php echo $_SESSION['new_txn_number'];  ?></h3>
 					<?php unset($_SESSION['new_txn_number']); ?>

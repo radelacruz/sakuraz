@@ -75,8 +75,8 @@
 	$lastname = $_SESSION['user']['lastname'];
 	$staff_email = 'storedomphils@gmail.com';
 	$customer_email = $_SESSION['user']['email'];		  //
-	$subject = 'Storedom - Order Confirmation';
-	$body = '<div style="text-transform:uppercase;"><h3>Dear '.$firstname.' '.$lastname.'</h3></div>'.'<div style="text-transform:uppercase;"><h3>Your order with the Reference No.: '.$transaction_number.' with the Total Amount of Php52,568.47 has been placed.</h3></div>'."<div>Ship to $address</div>";
+	$subject = 'Sakuraz Flower Shop - Order Confirmation';
+	$body = '<div style="text-transform:uppercase;"><h3>Dear '.$firstname.' '.$lastname.'</h3></div>'.'<div style="text-transform:uppercase;"><h3>Your order with the Reference No.: '.$transaction_number.' with the Total Amount of Php'. $item['price'] .'has been placed.</h3></div>'."<div>Ship to $address</div>";
 	try {
 		//Server settings
 		$mail->SMTPDebug = 4;								 // Enable verbose debug output
@@ -89,7 +89,7 @@
 		$mail->Port = 587;									// TCP port to connect to
 
 		//Recipients
-		$mail->setFrom($staff_email, 'Storedom');
+		$mail->setFrom($staff_email, 'Sakuraz Flower Shop');
 		$mail->addAddress($customer_email);  // Name is optional
 
 		//Content

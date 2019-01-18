@@ -1,0 +1,14 @@
+Client ID
+Ae8S9A-8aQ_i_o4zcKVY07k4MTgAz5gpAngZSUSCf-6_kYDa8Bg_WDBuZ_0h6Bny4aNe_av57yualuau
+
+Secret
+EDo_0AcQgw8Mky4mEV0v2FrPkL0c2I3HIXRi47kF9NyuvSZx-VmfpR1J81a4vFCCc6lrgdsImWWiHL57
+
+
+// paypal sdk
+https://github.com/paypal/PayPal-PHP-SDK/wiki/Installation
+
+// composer installation of paypal sdk
+composer require paypal/rest-api-sdk-php:*
+
+ex./opt/lampp/htdocs/batch19/sakuraz$ composer require paypal/rest-api-sdk-php:*

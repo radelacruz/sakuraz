@@ -10,7 +10,7 @@ function get_page_content() {
 				<!-- categories -->
 				<div class="col-sm-2">
 					<!-- display categories -->
-					<h2>Categories</h2>
+					<h2 class=" py-3">Categories</h2>
 					<ul class="list-group">
 						<a href="catalog.php">
 							<li class="list-group-item">All</li>

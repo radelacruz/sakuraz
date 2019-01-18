@@ -10,12 +10,12 @@ function get_page_content() {
 		} 
 		?>
 
-		<h1>Hello, welcome to your checkout page</h1>
+		<h1 class=" py-3">Hello, welcome to your checkout page</h1>
 		<form action="../controllers/placeorder.php" method="POST">
 			<div class="container">
 				<div class="row">
 					<div class="col-8">
-						<h4>Shipping Address</h4>
+						<h4 class=" py-3">Shipping Address</h4>
 						<div class="form-group">
 							<input type="text" class="form-control" name="addressLine1" value="<?php echo $_SESSION['user']['address']; ?>">
 						</div>

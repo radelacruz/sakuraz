@@ -5,34 +5,38 @@ function get_page_content() {
 		global $conn;
 ?>
 		<div class="container">
-			<h4 class="text-center">Orders</h4>
+			<h4 class="text-center py-3">Orders Admin Page</h4>
 			<div class="row">
 				<div class="col-sm-8 offset-sm-2">
 					<table class="table table-responsive table-striped">
 						<thead>
 							<tr class="text-center">
-								<th>Orders</th>
+								<th>Transaction Code</th>
 								<th>Status</th>
+								<th>Action</th>
 							</tr>
 						</thead>
-						<tbody class="text-center">
+						<tbody>
 							<?php
-							foreach ($_SESSION['user'] as $id => $qty) {
-								$sql2 = "SELECT * FROM items WHERE id=$id;";
-								$result = mysqli_query($conn,$sql2);
-								// var_dump($result);
-								$item = mysqli_fetch_assoc($result);
-								// var_dump($item);
+								$order_query = "SELECT o.id, o.transaction_code, o.status_id, s.name AS status FROM orders o JOIN statuses s ON (o.status_id = s.id);";
+								$orders = mysqli_query($conn, $order_query);
+								foreach ($orders as $order) {
+									// var_dump($order);
 							?>
-								<tr class="text-center">
-									<td colspan="2"><?php echo $item['name']; ?></td>
-									<td><?php echo $item['price']; ?></td>
-									<td><?php echo $qty; ?></td>
-									<td><?php echo $qty * $item['price']; ?></td>
-								</tr>
+								<tr>
+									<td><?php echo $order['transaction_code']; ?></td>
+									<td><?php echo $order['status']; ?></td>
+									<td>
+										<?php if($order['status'] == "pending"){ ?>
+											<a href="../controllers/complete_order.php?id=<?php echo $order['id']; ?>" class="btn btn-success">Complete Order</a>
+											<a href="../controllers/cancel_order.php?id=<?php echo $order['id']; ?>" class="btn btn-danger">Cancel Order</a>
+										<?php }; ?>
 
-							<?php } ?>
+									</td>
+								</tr>
+								<?php } ?>
 						</tbody>
+
 					</table>
 				</div> <!-- end cols -->
 			</div> <!-- end rows -->

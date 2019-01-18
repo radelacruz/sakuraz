@@ -27,11 +27,52 @@
 	padding: 5px;
 }
 
-small a{
+#disclaimer a{
 	text-decoration: none;
 	color: #E51666;
+	/*color: white;*/
+	font-weight: bolder;
+
+}
+#social a{
+	text-decoration: none;
+	color: white;
+}
+#social{
+	padding-bottom: 10px;
+}
+/* Style all font awesome icons */
+.fa {
+	font-size: 10px;
+	width: 25px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 100%;
+	padding: 7px;
+	height: 25px;
 }
 
+/* Add a hover effect if you want */
+.fa:hover {
+	opacity: 0.7;
+}
+
+/* Twitter */
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+
+}
+/* Facebook */
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
 .row{
 	margin-left: 0;
 	margin-right: 0;
@@ -43,7 +84,7 @@ small a{
 }
 
 .jumbotron{
-	background-color: lightpink;
+	background-color: transparent;
 }
 body{
 	height: 100vh;
@@ -55,4 +96,8 @@ body{
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+}
+
+#home{
+	height: 100vh;
 }

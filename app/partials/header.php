@@ -3,7 +3,7 @@
 			<i class="far fa-hand-peace"></i> SakuraZ
 		</a> -->
 		<img class="img-fluid logo" src="../assets/images/sakuraz.png">
-		<a class="navbar-brand mr-auto" href="index.html">SakuraZ Flower Shop</a>
+		<a class="navbar-brand mr-auto" href="./home.php">SakuraZ Flower Shop</a>
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
 			<span class="navbar-toggler-icon"></span>
