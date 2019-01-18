@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 18, 2019 at 05:09 AM
+-- Generation Time: Jan 18, 2019 at 08:00 AM
 -- Server version: 8.0.13
 -- PHP Version: 7.2.10-0ubuntu0.18.04.1
 
@@ -93,7 +93,7 @@ INSERT INTO `items` (`id`, `name`, `description`, `price`, `image_path`, `catego
 (26, 'SZ-SG003', 'Yellow Stargazers Bouquet (12 Stems)', '2850.00', '../assets/images/SG003.jpg', 9),
 (27, 'SZ-C001', 'Red Carnations Bouquet (30 Stems)', '5800.00', '../assets/images/C001.jpg', 10),
 (28, 'SZ-C002', 'Mixed Color Carnation Bouquet (12 Stems)', '3050.00', '../assets/images/C002.jpg', 10),
-(29, 'SZ-C003', 'Pink Carnation Bouquet (24 Stems)', '4800.00', '../assets/images/C003.jpg', 10),
+(29, 'SZ-C003', 'Pink Carnation Bouquet (24 Stems)', '9800.00', '../assets/images/C003.jpg', 10),
 (30, 'SZ-T002', 'Pink Tulips Bouquet (10 Stalks)', '3200.00', '../assets/images/T002.jpg', 1),
 (31, 'SZ-T003', 'This bouquet consist of 16 pink tulips and 3 stems of white roses.', '6200.00', '../assets/images/T003.jpg', 1),
 (32, 'SZ-T004', 'Bouquet of White Tulips (24 Stalks)', '6400.00', '../assets/images/T004.jpg', 1),
@@ -132,7 +132,15 @@ INSERT INTO `orders` (`id`, `user_id`, `transaction_code`, `status_id`, `payment
 (10, 15, 'DF0B2C16D4B12098-1547775478', 1, 1),
 (11, 18, 'A794690FBF03206E-1547775548', 1, 1),
 (12, 18, '2E9675B56176EE3B-1547775559', 2, 1),
-(13, 19, 'A005CD21AB9EBA85-1547779263', 1, 1);
+(13, 19, 'A005CD21AB9EBA85-1547779263', 1, 1),
+(14, 20, 'C44BF3CEE0D9C608-1547791079', 1, 1),
+(15, 20, 'C86916AF41628DEF-1547792041', 1, 1),
+(16, 20, 'SakuraZ Flower Shop_5c416f731118a', 1, 2),
+(17, 20, 'SakuraZ Flower Shop_5c41706bd1064', 1, 2),
+(18, 20, 'SakuraZ Flower Shop_5c41725271aa0', 1, 2),
+(19, 20, 'SakuraZ Flower Shop_5c417372c294a', 1, 2),
+(20, 18, '18806F2F3F691296-1547794685', 1, 1),
+(21, 18, 'SakuraZ Flower Shop_5c41796357e3c', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -179,7 +187,19 @@ INSERT INTO `order_items` (`id`, `order_id`, `price`, `item_id`, `quantity`) VAL
 (24, 11, '1399.00', 2, 1),
 (25, 11, '1050.00', 3, 1),
 (26, 12, '3999.00', 1, 1),
-(27, 13, '3999.00', 1, 1);
+(27, 13, '3999.00', 1, 1),
+(28, 14, '9800.00', 29, 1),
+(29, 15, '2200.00', 16, 1),
+(30, 20, '6880.00', 34, 1),
+(31, 20, '4400.00', 33, 1),
+(32, 20, '6400.00', 32, 1),
+(33, 20, '6200.00', 31, 1),
+(34, 20, '3200.00', 30, 1),
+(35, 20, '9800.00', 29, 1),
+(36, 20, '3050.00', 28, 2),
+(37, 20, '5800.00', 27, 2),
+(38, 20, '2850.00', 26, 2),
+(39, 20, '2800.00', 25, 2);
 
 -- --------------------------------------------------------
 
@@ -347,13 +367,13 @@ ALTER TABLE `items`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `payment_modes`

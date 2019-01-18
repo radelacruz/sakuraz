@@ -89,7 +89,7 @@ if($payment_mode_id == 1){
 	$staff_email = 'storedomphils@gmail.com';
 	$customer_email = $_SESSION['user']['email'];		  //
 	$subject = 'Sakuraz Flower Shop - Order Confirmation';
-	$body = '<div style="text-transform:uppercase;"><h3>Dear '.$firstname.' '.$lastname.'</h3></div>'.'<div style="text-transform:uppercase;"><h3>Your order with the Reference No.: '.$transaction_number.' and Total Amount of Php'. $item['price'] .' has been placed.</h3></div>'."<div>Ship to $address</div>";
+	$body = '<div style="text-transform:uppercase;"><h3>Dear '.$firstname.' '.$lastname.'</h3></div>'.'<div style="text-transform:uppercase;"><h3>Your order with the Reference No.: '.$transaction_number.' and Total Amount of Php'. $item['price'] .'has been placed.</h3></div>'."<div>Ship to $address</div>";
 	try {
 		//Server settings
 		$mail->SMTPDebug = 4;								 // Enable verbose debug output
@@ -156,10 +156,8 @@ if($payment_mode_id == 1){
 
     $redirectUrls = new RedirectUrls();
     $redirectUrls
-        // ->setReturnUrl('http://localhost:3306/batch19/sakuraz/app/controllers/pay.php?success=true')
-        // ->setCancelUrl('http://localhost:3306/batch19/sakuraz/app/controllers/pay.php?success=false');
-        ->setReturnUrl('http://localhost/batch19/sakuraz/app/controllers/pay.php?success=true')
-        ->setCancelUrl('http://localhost/batch19/sakuraz/app/controllers/pay.php?success=false');
+        ->setReturnUrl('http://localhost:3306/controllers/pay.php?success=true')
+        ->setCancelUrl('http://localhost:3306/controllers/pay.php?success=false');
 
     $payment = new Payment();
     $payment->setIntent('sale')
