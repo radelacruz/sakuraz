@@ -158,9 +158,10 @@ if($payment_mode_id == 1){
     $redirectUrls
         // ->setReturnUrl('http://localhost:3306/batch19/sakuraz/app/controllers/pay.php?success=true')
         // ->setCancelUrl('http://localhost:3306/batch19/sakuraz/app/controllers/pay.php?success=false');
-        ->setReturnUrl('http://localhost/batch19/sakuraz/app/controllers/pay.php?success=true')
-        ->setCancelUrl('http://localhost/batch19/sakuraz/app/controllers/pay.php?success=false');
-
+        // ->setReturnUrl('http://localhost/batch19/sakuraz/app/controllers/pay.php?success=true')
+        // ->setCancelUrl('http://localhost/batch19/sakuraz/app/controllers/pay.php?success=false');
+        ->setReturnUrl('https://sakuraz.herokuapp.com/app/controllers/pay.php?success=true')
+        ->setCancelUrl('https://sakuraz.herokuapp.com/app/controllers/pay.php?success=false');
     $payment = new Payment();
     $payment->setIntent('sale')
         ->setPayer($payer)
