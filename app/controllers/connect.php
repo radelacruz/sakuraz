@@ -1,8 +1,8 @@
 <?php
 	$host = 'db4free.net';
-	$username = 'sakuraz';
-	$password = 'Inc0rrect';
-	$dbname = 'sakuraz';
+	$username = 'annadriano';
+	$password = '#Inc0rrect';
+	$dbname = 'sakuraz_db';
 
 	// $host = 'localhost';
 	// $username = 'root';

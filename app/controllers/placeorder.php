@@ -86,7 +86,8 @@ if($payment_mode_id == 1){
 	// Passing `true` enables exceptions
 	$firstname = $_SESSION['user']['firstname'];
 	$lastname = $_SESSION['user']['lastname'];
-	$staff_email = 'sakurazflowershop@gmail.com';
+	// $staff_email = 'sakurazflowershop@gmail.com';
+	$staff_email = 'annadrianostaff@gmail.com';
 	$customer_email = $_SESSION['user']['email'];		  //
 	$subject = 'SakuRaz Flower Shop - Order Confirmation';
 	$price = $item['price'];

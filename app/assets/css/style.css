@@ -150,10 +150,17 @@ footer{
 	height: 40vh;
 }
 
+img{
+	pointer-events: none;
+}
 
+header{
+	height: 20vh;
+}
 
-
-
+#confirmation{
+	height: 80vh;
+}
 
 
 

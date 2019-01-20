@@ -4,7 +4,7 @@ function get_page_content(){
 	if(isset($_SESSION['user']) && $_SESSION['user']['roles_id'] ==2){
 		global $conn;
 ?>	
-		<div class="container main-container my-4">
+		<div id="confirmation" class="container main-container my-4">
 			<div class="row">
 				<div class="col-sm-12">
 					<h1 class="text-center py-3">Confirmation Page</h1>
