@@ -86,10 +86,29 @@ if($payment_mode_id == 1){
 	// Passing `true` enables exceptions
 	$firstname = $_SESSION['user']['firstname'];
 	$lastname = $_SESSION['user']['lastname'];
-	$staff_email = 'storedomphils@gmail.com';
+	$staff_email = 'sakurazflowershop@gmail.com';
 	$customer_email = $_SESSION['user']['email'];		  //
-	$subject = 'Sakuraz Flower Shop - Order Confirmation';
-	$body = '<div style="text-transform:uppercase;"><h3>Dear '.$firstname.' '.$lastname.'</h3></div>'.'<div style="text-transform:uppercase;"><h3>Your order with the Reference No.: '.$transaction_number.' and Total Amount of Php'. $item['price'] .' has been placed.</h3></div>'."<div>Ship to $address</div>";
+	$subject = 'SakuRaz Flower Shop - Order Confirmation';
+	$price = $item['price'];
+	$body = '<div style="text-transform:capitalize;">
+				<h3>Dear '.$firstname.' '.$lastname.',</h3>
+			</div>'.
+			'<div><p>Your order with the <strong style="color:red"> Reference No.:  '.$transaction_number.' </strong> has been placed on '. $purchase_date.' via <strong> Cash on Delivery (COD) </strong>. You will receive another email after your item(s) has been shipped.</p></div>'.
+			'<div><h3 style="color:red">Note:</h3></div>'.
+			'<div>
+				<p>Make sure that the information you provided in your order follows the required format:</p>
+					<ul>
+						<li>Name – First and Last Name</li>
+						<li>Shipping Address – House Number, Building and Street Name, Province, City/Municipality, and Barangay</li>
+					</ul>
+				<p>In the event that the information you provided is incomplete, you may place a new order with the correct and complete details and cancel the initial order, if still within the processing stage. Incorrect or incomplete details can result in the cancellation of order.</p>
+				<p>If you did not place this order, please report it to us immediately.</p>
+			</div>'.
+			"Total Amount: $price".
+			"<div>Shipping Address: $address</div>";
+
+
+	// $body = '<div style="text-transform:capitalize;"><h3>Dear '.$firstname.' '.$lastname.'</h3></div>'.'<div style="text-transform:uppercase;"><h3>Your order with the Reference No.: '.$transaction_number.' and Total Amount of Php'. $item['price'] .' has been placed.</h3></div>'."<div>Ship to $address</div>";
 	try {
 		//Server settings
 		$mail->SMTPDebug = 4;								 // Enable verbose debug output
@@ -97,12 +116,12 @@ if($payment_mode_id == 1){
 		$mail->Host = 'smtp.gmail.com';					   // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;							   // Enable SMTP authentication
 		$mail->Username = $staff_email;					   // SMTP username
-		$mail->Password = 'Inc0rrect';					 // SMTP password
+		$mail->Password = '#Inc0rrect';					 // SMTP password
 		$mail->SMTPSecure = 'tls';							// Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;									// TCP port to connect to
 
 		//Recipients
-		$mail->setFrom($staff_email, 'Sakuraz Flower Shop');
+		$mail->setFrom($staff_email, 'SakuRaz Flower Shop');
 		$mail->addAddress($customer_email);  // Name is optional
 
 		//Content
@@ -151,8 +170,8 @@ if($payment_mode_id == 1){
     $transaction = new Transaction();
     $transaction ->setAmount($amount)
                 ->setItemList($item_list)
-                ->setDescription('Payment for SakuraZ Flower Shop')
-                ->setInvoiceNumber(uniqid("SakuraZ Flower Shop_"));
+                ->setDescription('Payment for SakuRaZ Flower Shop')
+                ->setInvoiceNumber(uniqid("SakuRaZ Flower Shop_"));
 
     $redirectUrls = new RedirectUrls();
     $redirectUrls

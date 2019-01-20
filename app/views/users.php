@@ -4,7 +4,7 @@ function get_page_content() {
 	if(isset($_SESSION['user']) && $_SESSION['user']['roles_id'] ==1){
 		global $conn;
 ?>
-		<div class="container">
+		<div id="users" class="container">
 			<h4 class="text-center">User Admin Page</h4>
 			<div class="row">
 				<div class="col-sm-8 offset-sm-2">

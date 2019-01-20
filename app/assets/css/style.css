@@ -13,7 +13,22 @@
 #navbar > img{
 	size: 50px;
 }
-
+strong{
+	color: #E51666;
+	font-family: 'Playball', cursive;
+	font-size: 140px;
+	text-shadow: 2px 2px 4px #000000;
+	padding-top: 50px;
+}
+#jumbo{
+	color: #E51666;
+	font-family: 'Playball', cursive;
+	font-size: 50px;
+	text-shadow: 2px 2px 4px #000000;
+}
+#home{
+	height: 85vh;
+}
 #navbar> a{
 	color: #E51666;
 	font-family: 'Playball', cursive;
@@ -98,3 +113,70 @@ body{
 	-o-background-size: cover;
 }
 
+/*img {
+    pointer-events: none;
+}
+*/
+
+#body{
+	/*box-shadow: 10px 10px 5px pink;*/
+}
+
+#back {
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	z-index: 1;
+	color: white;
+	text-shadow: 10px 10px 5px black;
+}
+
+#card{
+	box-shadow: 5px 5px 5px 5px pink;
+}
+
+#home-img{
+	height: 300px;
+}
+
+
+#users,
+#cart{
+	/*height: 100vh;*/
+}
+
+
+footer{
+	height: 40vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Mobile Styles*/
+@media only screen and (max-width: 400px){
+	strong{
+		font-size: 80px;
+	}
+
+}
+
+
+/*Tablet Styles*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+}
+
+/*Desktop Styles*/
+
+@media only screen and (min-width: 961px) {
+
+
+}

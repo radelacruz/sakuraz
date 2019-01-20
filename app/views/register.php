@@ -5,7 +5,7 @@ function get_page_content() {
 ?>
 	<div class="container">
 		<div class="jumbotron  text-center mt-5"> <!-- bg-dark text-light -->
-			<h4>Register</h4>
+			<h4 id="jumbo">Register</h4>
 		</div> <!-- end jumbo -->
 
 		<form>

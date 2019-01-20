@@ -3,7 +3,7 @@
 	if(!isset($_SESSION['user']) || (isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 2))){
 		global $conn;
 ?>
-		<div class="container my-4">
+		<div id="cart" class="container my-4">
 			<div class="row">
 				<div class="col-12">
 					<h1 class=" py-3">Cart Page</h1>
