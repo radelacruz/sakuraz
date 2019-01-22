@@ -14,32 +14,56 @@ function get_page_content() {
 	<div id="product" class="my-5 text-center">
 		<div class="container">
 			<h2 class="my-3">Our Products</h2>
-			<p class="card-text">SakuRaz provides a selection of flower arrangements and bouquets that suit any occasion</p>
 			<div class="row">
 				<div class="col-12 col-md-4 col-lg-4">
 					<div id="card" class="card h-100" >
 						<img id="home-img" class="card-img-top img-fluid" src="../assets/images/R004.jpg">
 
 						<div class="card-body">
-							<h3 class="card-title">Cream Color Roses Bouquet</h3>	
+							<?php
+							if(!isset($_SESSION['user']) || (isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 2))){
+
+							?>
+							<h3 class="card-title"><a href="./occasion.php">Occasions</a></h3>
+							<?php } elseif(isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 1)){ ?>							
+							<h3 class="card-title"><a href="./occasion_items.php">Occasions</a></h3>
+							<?php }; ?>
+							<p class="card-text">SakuRaz provides a selection of flower arrangements and bouquets that suit any occasion</p>
 						</div>
 					</div> <!-- end card -->
 				</div> <!-- end 4 cols -->
+
 				<div class="col-12 col-md-4 col-lg-4">
-					<div id="card" class="card h-100" >
-						<img id="home-img" class="card-img-top img-fluid" src="../assets/images/PR003.jpg">
+					<div id="card" class="card h-100">
+						<img id="home-img" class="card-img-top img-fluid" src="../assets/images/SY001.jpg">
 
 						<div class="card-body">
-							<h3 class="card-title">Preserved Pink Rose Cube</h3>	
+							<?php
+							if(!isset($_SESSION['user']) || (isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 2))){
+
+							?>
+							<h3 class="card-title"><a href="./sympathy.php">Sympathy and Funeral</a></h3>
+							<?php } elseif(isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 1)){ ?>
+							<h3 class="card-title"><a href="./sym_items.php">Sympathy and Funeral</a></h3>
+							<?php }; ?>
+							<p class="card-text">SakuRaz provides you a variety of sympathy flower arrangements and funeral flower arrangements. </p>
 						</div>
 					</div> <!-- end card -->
 				</div> <!-- end 4 cols -->
-				<div class="col-12 col-md-4 col-lg-4">
-					<div id="card" class="card h-100" >
-						<img id="home-img" class="card-img-top img-fluid" src="../assets/images/C003.jpg">
 
+				<div class="col-12 col-md-4 col-lg-4">
+					<div id="card" class="card h-100">
+						<img id="home-img" class="card-img-top img-fluid" src="../assets/images/WB001.jpg">
 						<div class="card-body">
-							<h3 class="card-title">Pink Carnation Bouquet</h3>	
+							<?php
+							if(!isset($_SESSION['user']) || (isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 2))){
+
+							?>
+							<h3 class="card-title"><a href="./event.php">Wedding and Events</a></h3>
+							<?php } elseif(isset($_SESSION['user']) && ($_SESSION['user']['roles_id'] == 1)){ ?>
+							<h3 class="card-title"><a href="./event_items.php">Wedding and Events</a></h3>
+							<?php }; ?>
+							<p class="card-text">SakuRaz provides an exclusive wedding and events packages which are designed to make planning your special day easier</p>
 						</div>
 					</div> <!-- end card -->
 				</div> <!-- end 4 cols -->

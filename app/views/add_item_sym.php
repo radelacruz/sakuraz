@@ -8,7 +8,7 @@ function get_page_content() {
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 offset-sm-2">
-					<form action="../controllers/process_add_item.php" method="POST"  enctype="multipart/form-data">
+					<form action="../controllers/process_add_item_sym.php" method="POST"  enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="name">Name:</label>
 							<input type="text" class="form-control" name="name" id="name" required>
@@ -26,7 +26,7 @@ function get_page_content() {
 							<label for="categories">Category:</label>
 							<select class="form-control  col-8" name="category_id" id="categories" required>
 								<?php
-								$sql = "SELECT * FROM categories";
+								$sql = "SELECT * FROM sympathy";
 								$categories = mysqli_query($conn, $sql);
 								foreach ($categories as $category) {
 									//extract is another way of getting data. it transforms the columns into variables

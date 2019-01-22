@@ -7,7 +7,7 @@
 	// $host = 'localhost';
 	// $username = 'root';
 	// $password = '';
-	// $dbname = 'sakuraz';
+	// $dbname = 'sakuraz_db';
 	
 	$conn = mysqli_connect($host, $username, $password, $dbname);
 

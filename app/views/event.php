@@ -12,14 +12,14 @@ function get_page_content() {
 					<!-- display categories -->
 					<h2 class=" py-3">Categories</h2>
 					<ul class="list-group">
-						<a href="catalog.php">
+						<a href="event.php">
 							<li class="list-group-item">All</li>
 						</a>
 						<?php
-						$sql = "SELECT * FROM categories";
+						$sql = "SELECT * FROM events";
 						$categories = mysqli_query($conn, $sql);
 						foreach ($categories as $category) { ?>
-							<a href="catalog.php?category_id=<?php echo $category['id']; ?>">
+							<a href="event.php?category_id=<?php echo $category['id']; ?>">
 								<li class="list-group-item">
 									<?php echo $category['name']; ?>
 								</li>
@@ -45,7 +45,7 @@ function get_page_content() {
 				<div class="col-sm-10">
 					<div class="container">
 						<?php
-						$sql2 = "SELECT * FROM items";
+						$sql2 = "SELECT * FROM event_items";
 						//filter via category
 						if(isset($_GET['category_id'])){
 							$sql2 .= " WHERE category_id =".$_GET['category_id'];
