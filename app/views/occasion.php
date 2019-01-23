@@ -59,7 +59,7 @@ function get_page_content() {
 						echo "<div class='row'>";
 						foreach ($items as $item){ ?>
 							<div class="col-sm-3 my-4">
-								<div id="card" class="card h-100 ">
+								<div id="card" class="card h-100" data-toggle="modal" data-target="#modal-<?php echo $item['id']; ?>">
 									<img class="card-img-top img-fluid5" height="200" src="<?php echo $item['image_path']; ?>">
 									<div class="card-body">
 										<h4 class="card-title">
@@ -77,6 +77,26 @@ function get_page_content() {
 										<button type="submit" class="btn add-to-cart" data-id="<?php echo $item['id']; ?>" title="Add to Cart">🛒</button>
 									</div>
 								</div> <!-- end card -->
+
+								<!-- modal itself -->
+								<div id="modal-<?php echo $item['id']; ?>" class="modal fade mx-0">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<header class="modal-header m-0">
+												<h5 class="modal-title"><?php echo $item['name']; ?></h5>
+												<button class="close" data-dismiss="modal">
+													<span> &times; </span>
+												</button>
+											</header> <!-- end modal header -->
+
+											<div class="modal-body">
+												<img class="card-img-top img-fluid5" height="200" src="<?php echo $item['image_path']; ?>">
+												<p class="py-2"><?php echo $item['description']; ?></p>
+												<p class="card-text">Price: <?php echo $item['price']; ?></p>
+											</div> <!-- end modal-body -->
+										</div> <!-- end modal-content -->
+									</div>
+								</div> <!-- end modal-1 -->
 							</div> <!-- end item col -->
 						<?php } echo "</div>" ?> <!-- end of items row -->		
 					</div> <!-- end items container -->

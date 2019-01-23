@@ -36,32 +36,6 @@ function get_page_content() {
 							</div> <!-- end card-footer -->
 						</div> <!-- end card -->
 					</div> <!-- end col-sm-3 -->
-
-					<!-- modal itself -->
-					<div id="modal-1" class="modal fade">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-								<header class="modal-header">
-									<h5 class="modal-title"><?php echo $item['name']; ?></h5>
-									<button class="close" data-dismiss="modal">
-										<span> &times; </span>
-									</button>
-								</header> <!-- end modal header -->
-
-								<div class="modal-body">
-									<<img src="<?php echo $item['image_path']; ?>" class="card-img-top" height="250">
-									<p class="py-2"><?php echo $item['description']; ?></p>
-									<p class="card-text">Price: <?php echo $item['price']; ?></p>
-									
-								</div> <!-- end modal-body -->
-
-<!-- 								<footer class="modal-footer">
-									<button class="btn btn-danger d-none d-sm-block " data-dismiss="modal">Close</button>
-								</footer> -->
-								
-							</div> <!-- end modal-content -->
-						</div>
-					</div> <!-- end modal-1 -->
 				<?php } ?>
 			</div> <!-- end row -->
 		</div> <!-- end container -->

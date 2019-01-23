@@ -150,19 +150,31 @@ footer{
 	height: 40vh;
 }
 
-/*img{
+img{
 	pointer-events: none;
-}*/
-
-header{
-	height: 20vh;
 }
 
 #confirmation{
 	height: 80vh;
 }
 
+/*#modal-header{
+	width: 100%;
 
+}*/
+
+.modal {
+	z-index: 1999;
+	position: fixed;
+}
+.modal-content{
+	background-color: pink;
+}
+.modal-content img{
+	height: 250px;
+	width: 100%;
+	box-shadow: 10px 10px 5px grey;
+}
 
 
 

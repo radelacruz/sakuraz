@@ -222,11 +222,11 @@ $(document).ready( () => {
 	});
 
 
-	//submit profile from updates
+	// submit profile from updates
 
-	// $("#update_info").click(() =>{
-	// 	$('#update_user_details').submit();
-	// });
+	$("#update_info").click(() =>{
+		$('#update_user_details').submit();
+	});
 
 
 
