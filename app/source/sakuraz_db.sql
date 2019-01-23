@@ -2,10 +2,10 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 22, 2019 at 04:14 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 23, 2019 at 02:47 PM
+-- Server version: 8.0.13
+-- PHP Version: 7.2.10-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -119,7 +119,7 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `description`, `price`, `image_path`, `category_id`) VALUES
-(1, 'SZ-T001', 'Colorful Tulips Bouquet (30 Stalks)\r\n', '15999.00', '../assets/images/T001.jpg', 1),
+(1, 'SZ-T001', 'Colorful Tulips Bouquet (24 Stalks)\r\n', '4999.00', '../assets/images/T001.jpg', 1),
 (2, 'SZ-SF001', 'Sunflower Bouquet (5 Stems)', '1399.00', '../assets/images/SF001.jpg', 2),
 (3, 'SZ-SF002', 'Sunflower Bouquet (3 Stems)', '1050.00', '../assets/images/SF002.jpg', 2),
 (4, 'SZ-G001', 'Bright pink Gerbera Bouquet (10 Stems)', '1850.00', '../assets/images/G001.jpg', 3),
@@ -143,11 +143,11 @@ INSERT INTO `items` (`id`, `name`, `description`, `price`, `image_path`, `catego
 (26, 'SZ-SG003', 'Yellow Stargazers Bouquet (12 Stems)', '2850.00', '../assets/images/SG003.jpg', 9),
 (27, 'SZ-C001', 'Red Carnations Bouquet (30 Stems)', '5800.00', '../assets/images/C001.jpg', 10),
 (28, 'SZ-C002', 'Mixed Color Carnation Bouquet (12 Stems)', '3050.00', '../assets/images/C002.jpg', 10),
-(29, 'SZ-C003', 'Pink Carnation Bouquet (24 Stems)', '9800.00', '../assets/images/C003.jpg', 10),
-(30, 'SZ-T002', 'Pink Tulips Bouquet (10 Stalks)', '8200.00', '../assets/images/T002.jpg', 1),
-(31, 'SZ-T003', 'This bouquet consist of 16 pink tulips and 3 stems of white roses.', '11200.00', '../assets/images/T003.jpg', 1),
-(32, 'SZ-T004', 'Bouquet of White Tulips (25 Stalks)', '12400.00', '../assets/images/T004.jpg', 1),
-(33, 'SZ-T005', 'This bouquet consist of 10 stalks of purple tulips. Mix with small flowers and eustoma.', '7800.00', '../assets/images/T005.jpg', 1),
+(29, 'SZ-C003', '-=[ (24 Stems)', '9800.00', '../assets/images/C003.jpg', 10),
+(30, 'SZ-T002', 'Pink Tulips Bouquet (10 Stalks)', '3200.00', '../assets/images/T002.jpg', 1),
+(31, 'SZ-T003', 'This bouquet consist of 16 pink tulips and 3 stems of white roses.', '6200.00', '../assets/images/T003.jpg', 1),
+(32, 'SZ-T004', 'Bouquet of White Tulips (24 Stalks)', '6400.00', '../assets/images/T004.jpg', 1),
+(33, 'SZ-T005', 'This bouquet consist of 10 stalks of purple tulips. Mix with small flowers and eustoma.', '4400.00', '../assets/images/T005.jpg', 1),
 (34, 'SZ-M004', 'This bouquet consist of 10 red tulips and 12 stalks of pink roses.', '6880.00', '../assets/images/M004.jpg', 8);
 
 -- --------------------------------------------------------
@@ -215,29 +215,44 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `user_id`, `transaction_code`, `purchase_date`, `status_id`, `payment_mode_id`) VALUES
-(1, 19, 'C46D3E1BAEC396A4-1547736396', '2019-01-18 11:21:11', 2, 1),
-(2, 19, '8FA15B0C0F2E4768-1547775130', '2019-01-18 11:21:11', 3, 1),
-(3, 19, '69B2671BA4F652CE-1547775142', '2019-01-18 11:21:11', 2, 1),
-(4, 19, '2AECC36F75866B52-1547775155', '2019-01-18 11:21:11', 2, 1),
-(5, 19, '0E876022C7E9086F-1547775166', '2019-01-18 11:21:11', 3, 1),
-(6, 19, 'B503E27F899D343F-1547775175', '2019-01-18 11:21:11', 2, 1),
-(7, 19, '083CAFBC0B654B53-1547775189', '2019-01-18 11:21:11', 1, 1),
-(8, 15, 'E90D8CDCE8326F4A-1547775456', '2019-01-18 11:21:11', 1, 1),
-(9, 15, '82E4384419A81675-1547775468', '2019-01-18 11:21:11', 1, 1),
-(10, 15, 'DF0B2C16D4B12098-1547775478', '2019-01-18 11:21:11', 1, 1),
-(11, 18, 'A794690FBF03206E-1547775548', '2019-01-18 11:21:11', 1, 1),
-(12, 18, '2E9675B56176EE3B-1547775559', '2019-01-18 11:21:11', 2, 1),
-(13, 19, 'A005CD21AB9EBA85-1547779263', '2019-01-18 11:21:11', 1, 1),
-(14, 20, 'C44BF3CEE0D9C608-1547791079', '2019-01-18 11:21:11', 1, 1),
-(15, 20, 'C86916AF41628DEF-1547792041', '2019-01-18 11:21:11', 1, 1),
-(16, 20, 'SakuraZ Flower Shop_5c416f731118a', '2019-01-18 11:21:11', 1, 2),
-(17, 20, 'SakuraZ Flower Shop_5c41706bd1064', '2019-01-18 11:21:11', 1, 2),
-(18, 20, 'SakuraZ Flower Shop_5c41725271aa0', '2019-01-18 11:21:11', 1, 2),
-(19, 20, 'SakuraZ Flower Shop_5c417372c294a', '2019-01-18 11:21:11', 1, 2),
-(20, 18, '18806F2F3F691296-1547794685', '2019-01-18 11:21:11', 1, 1),
-(21, 18, 'SakuraZ Flower Shop_5c41796357e3c', '2019-01-18 11:21:11', 1, 2),
-(22, 19, 'A19E688C9E03B405-1548074938', '2019-01-21 05:48:58', 1, 1);
+INSERT INTO `orders` (`id`, `user_id`, `transaction_code`, `status_id`, `payment_mode_id`) VALUES
+(1, 19, 'C46D3E1BAEC396A4-1547736396', 2, 1),
+(2, 19, '8FA15B0C0F2E4768-1547775130', 3, 1),
+(3, 19, '69B2671BA4F652CE-1547775142', 2, 1),
+(4, 19, '2AECC36F75866B52-1547775155', 2, 1),
+(5, 19, '0E876022C7E9086F-1547775166', 3, 1),
+(6, 19, 'B503E27F899D343F-1547775175', 2, 1),
+(7, 19, '083CAFBC0B654B53-1547775189', 1, 1),
+(8, 15, 'E90D8CDCE8326F4A-1547775456', 1, 1),
+(9, 15, '82E4384419A81675-1547775468', 1, 1),
+(10, 15, 'DF0B2C16D4B12098-1547775478', 1, 1),
+(11, 18, 'A794690FBF03206E-1547775548', 1, 1),
+(12, 18, '2E9675B56176EE3B-1547775559', 2, 1),
+(13, 19, 'A005CD21AB9EBA85-1547779263', 1, 1),
+(14, 20, 'C44BF3CEE0D9C608-1547791079', 1, 1),
+(15, 20, 'C86916AF41628DEF-1547792041', 1, 1),
+(16, 20, 'SakuraZ Flower Shop_5c416f731118a', 1, 2),
+(17, 20, 'SakuraZ Flower Shop_5c41706bd1064', 1, 2),
+(18, 20, 'SakuraZ Flower Shop_5c41725271aa0', 1, 2),
+(19, 20, 'SakuraZ Flower Shop_5c417372c294a', 1, 2),
+(20, 18, '18806F2F3F691296-1547794685', 1, 1),
+(21, 18, 'SakuraZ Flower Shop_5c41796357e3c', 1, 2),
+(22, 19, '75E79E2C6718E15D-1547979450', 1, 1),
+(23, 19, 'DE2FB153979027AE-1547982231', 1, 1),
+(24, 19, 'CB4021972EDB4C75-1547982388', 1, 1),
+(25, 19, 'FD74718B76BB7580-1547984253', 1, 1),
+(26, 19, '242A45E932EFFB4A-1547984272', 1, 1),
+(27, 19, '62B278E071C110A8-1547984346', 1, 1),
+(28, 19, '730BD3797EE99128-1547984499', 1, 1),
+(29, 19, '92A241F7FACEFA3B-1547986237', 1, 1),
+(30, 19, '4843848142CE2C85-1547986407', 1, 1),
+(31, 19, 'B4BFD061802C25F1-1547986486', 1, 1),
+(32, 19, 'F1D7F72CCF4E17E0-1547989090', 1, 1),
+(33, 19, 'D078B8D259CB64D8-1547989521', 1, 1),
+(34, 19, '31D375D7AC2339E7-1547990577', 1, 1),
+(35, 19, '6005E972E23E437B-1547993092', 1, 1),
+(36, 19, 'SakuRaZ Flower Shop_5c44801959ccf', 1, 2),
+(37, 19, '72D331CBCE348F81-1547993621', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -297,9 +312,41 @@ INSERT INTO `order_items` (`id`, `order_id`, `price`, `item_id`, `quantity`) VAL
 (37, 20, '5800.00', 27, 2),
 (38, 20, '2850.00', 26, 2),
 (39, 20, '2800.00', 25, 2),
-(40, 22, '15999.00', 1, 3),
-(41, 22, '16580.00', 23, 1),
-(42, 22, '12950.00', 22, 1);
+(40, 22, '1050.00', 3, 1),
+(41, 22, '1850.00', 4, 1),
+(42, 23, '4999.00', 1, 1),
+(43, 23, '1399.00', 2, 1),
+(44, 24, '1399.00', 2, 1),
+(45, 26, '1399.00', 2, 1),
+(46, 26, '1050.00', 3, 1),
+(47, 26, '1850.00', 4, 1),
+(48, 27, '1399.00', 2, 1),
+(49, 27, '1050.00', 3, 1),
+(50, 27, '1850.00', 4, 1),
+(51, 28, '4999.00', 1, 1),
+(52, 28, '1399.00', 2, 1),
+(53, 28, '1050.00', 3, 1),
+(54, 29, '1399.00', 2, 1),
+(55, 29, '1050.00', 3, 1),
+(56, 30, '4999.00', 1, 1),
+(57, 31, '1399.00', 2, 1),
+(58, 31, '1050.00', 3, 1),
+(59, 32, '1399.00', 2, 1),
+(60, 32, '1050.00', 3, 1),
+(61, 33, '4999.00', 1, 1),
+(62, 33, '1399.00', 2, 2),
+(63, 33, '1050.00', 3, 2),
+(64, 33, '1850.00', 4, 2),
+(65, 34, '4999.00', 1, 1),
+(66, 34, '1399.00', 2, 1),
+(67, 34, '1050.00', 3, 1),
+(68, 34, '1850.00', 4, 1),
+(69, 35, '1399.00', 2, 1),
+(70, 35, '1050.00', 3, 1),
+(71, 35, '1850.00', 4, 1),
+(72, 37, '5800.00', 27, 1),
+(73, 37, '3050.00', 28, 1),
+(74, 37, '9800.00', 29, 1);
 
 -- --------------------------------------------------------
 
@@ -549,46 +596,22 @@ ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `event_items`
---
-ALTER TABLE `event_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `occasions`
---
-ALTER TABLE `occasions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `occ_items`
---
-ALTER TABLE `occ_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `payment_modes`
@@ -609,44 +632,20 @@ ALTER TABLE `statuses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `sympathy`
---
-ALTER TABLE `sympathy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `sym_items`
---
-ALTER TABLE `sym_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `event_items`
---
-ALTER TABLE `event_items`
-  ADD CONSTRAINT `event_items_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `events` (`id`);
-
---
 -- Constraints for table `items`
 --
 ALTER TABLE `items`
   ADD CONSTRAINT `items_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
-
---
--- Constraints for table `occ_items`
---
-ALTER TABLE `occ_items`
-  ADD CONSTRAINT `occ_items_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `occasions` (`id`);
 
 --
 -- Constraints for table `orders`
@@ -662,12 +661,6 @@ ALTER TABLE `orders`
 ALTER TABLE `order_items`
   ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `order_items_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`);
-
---
--- Constraints for table `sym_items`
---
-ALTER TABLE `sym_items`
-  ADD CONSTRAINT `sym_items_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `sympathy` (`id`);
 
 --
 -- Constraints for table `users`
