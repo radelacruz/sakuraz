@@ -58,7 +58,7 @@ function get_page_content() {
 						$items = mysqli_query($conn, $sql2);
 						echo "<div class='row'>";
 						foreach ($items as $item){ ?>
-							<div class="col-sm-3 my-4">
+							<div class="col-sm-4 my-4">
 								<div id="card" class="card h-100" data-toggle="modal" data-target="#modal-<?php echo $item['id']; ?>">
 									<img class="card-img-top img-fluid5" height="200" src="<?php echo $item['image_path']; ?>">
 									<div class="card-body">
