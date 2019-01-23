@@ -7,7 +7,7 @@ function get_page_content() {
 			<p class="text-center lead">Welcome to</p>
 			<h1><strong>SakuRaz</strong></h1>
 			<hr>
-			<p class="text-center lead px-3">SakuRaz is one of the best flower shop in the Philippines.</p>
+			<p class="text-center lead px-3">Provide creative solutions for all your floral needs.</p>
 		</div>
 	</div>
 
