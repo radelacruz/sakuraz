@@ -1,8 +1,8 @@
 <?php
 	$host = 'sql12.freemysqlhosting.net';
-	$username = 'sql12282203';
-	$password = 'wD8veeMY1F';
-	$dbname = 'sql12282203';
+	$username = 'sql12296409';
+	$password = 'fAPYkHhnqh';
+	$dbname = 'sql12296409';
 
 	// Server: sql12.freemysqlhosting.net
 	// Name: sql12278905
